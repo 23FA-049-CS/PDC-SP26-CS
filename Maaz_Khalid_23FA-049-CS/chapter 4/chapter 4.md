@@ -27,118 +27,67 @@ When full communication between all processes is required.
 - `Useful in parallel matrix operations` 
 
 **Disadvantages**
-```
 
 - `High communication cost` 
 
 - `Not scalable for large systems` 
 
-```
 **Summary**
 Alltoall is used for complete data exchange between processes.
-```
 
-```
----
-```
-
-```
 ## Topic: Broadcast
-```
 
-```
 **What I Learned**
-```
 
-```
 I learned how one process shares data with all other processes.
-```
 
-```
 **How to Execute**
 mpiexec -n 4 python broadcast.py
-```
 
-```
 **Use / Output**
 Root process sends a variable to all other processes.
-```
 
-```
 **When to Use**
 When same data is needed by all processes.
-```
 
-```
 **Advantages**
-```
 
-```
 - Simple data sharing
-```
 
 - `Efficient for common values` 
 
 - `**Disadvantages** - Only one source of data` 
 
-```
+
 **Summary**
 Broadcast sends data from one process to all processes.
-```
 
-```
----
-```
-
-```
 ## Topic: Deadlock Problem
-```
 
-```
 **What I Learned**
-```
 
-```
 I learned how deadlock occurs when two processes wait for each other to
 send/receive data.
-```
 
-```
 **How to Execute**
 mpiexec -n 6 python deadlock.py
 **Use / Output**
 Processes 1 and 5 wait on each other causing blocking behavior.
-```
 
-```
 **When to Use**
 Used for understanding synchronization problems.
-```
 
-```
 **Advantages**
 - Helps understand MPI synchronization issues
-```
 
-```
 **Disadvantages**
 - Causes program freeze
-```
 
-```
 - Poor design leads to deadlock
-```
 
-```
 **Summary**
 Deadlock happens when processes wait indefinitely for each other.
-```
 
-```
----
-```
-
-```
 ## Topic: Gather
 **What I Learned**
 I learned how multiple processes send data to one root process.
@@ -146,81 +95,45 @@ I learned how multiple processes send data to one root process.
 mpiexec -n 4 python gather.py
 **Use / Output**
 All processes send computed values to root process.
-```
 
-```
 **When to Use**
 When collecting data from multiple processes.
-```
 
-```
 **Advantages**
 - Centralized data collection
 - Easy aggregation
-```
 
-```
 **Disadvantages**
 - Root process overload
-```
 
-```
 **Summary**
 Gather collects data from all processes to root.
-```
 
-```
----
-```
-
-```
 ## Topic: Hello World MPI
-```
 
-```
 **What I Learned**
-```
 
-```
 I learned how MPI processes are initialized and how each process has a unique
 rank.
-```
 
-```
 **How to Execute**
 mpiexec -n 4 python helloworld.py
-```
 
-```
 **Use / Output**
 Each process prints its rank.
-```
 
-```
 **When to Use**
 To test MPI setup.
-```
 
-```
 **Advantages**
 - Simple verification program
-```
 
-```
 **Disadvantages**
 - No practical computation
-```
 
-```
 **Summary**
 Each MPI process runs independently and has a rank.
-```
 
-```
----
-```
-
-```
 ## Topic: Point to Point Communication
 ```
 
