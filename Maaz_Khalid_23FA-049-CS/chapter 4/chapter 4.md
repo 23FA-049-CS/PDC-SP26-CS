@@ -135,177 +135,110 @@ To test MPI setup.
 Each MPI process runs independently and has a rank.
 
 ## Topic: Point to Point Communication
-```
 
-```
 **What I Learned**
+
 I learned how processes directly send and receive messages.
-```
 
-```
 **How to Execute**
+
 mpiexec -n 9 python send_recv.py
+
 **Use / Output**
+
 Processes send messages to specific target processes.
-```
 
-```
 **When to Use**
-When direct communication is needed.
-```
 
-```
+When direct communication is needed.
+
 **Advantages**
 - Precise communication
-```
-
 - `Efficient for small data exchange` 
 
 - `**Disadvantages** - Requires correct process coordination` 
 
-```
 **Summary**
 Point-to-point communication sends data between specific processes.
-```
 
-```
----
-```
-
-```
 ## Topic: Reduction
-```
 
-```
 **What I Learned**
 I learned how to combine data from all processes using a reduction operation.
-```
 
-```
 **How to Execute**
 mpiexec -n 4 python reduce.py
 **Use / Output**
 All process data is summed and sent to root.
-```
 
-```
 **When to Use**
 When performing aggregation operations.
-```
 
-```
 **Advantages**
 - Efficient computation
-```
 
-```
 - Useful for mathematical operations
-```
 
-```
 **Disadvantages**
 - Only root gets final result
-```
 
-```
 **Summary**
 Reduce combines data from all processes.
-```
 
-```
----
-```
-
-```
 ## Topic: Scatter
-```
 
-```
 **What I Learned**
-```
 
-```
 I learned how root process distributes data to all processes.
-```
 
-```
 **How to Execute**
 mpiexec -n 4 python scatter.py
-```
 
-```
 **Use / Output**
 Array is split and distributed among processes.
-```
 
-```
 **When to Use**
 When distributing tasks.
-```
 
-```
 **Advantages**
-```
+
 
 - `Balanced workload distribution` 
 
 - `**Disadvantages** - Requires proper data size` 
 
-```
+
 **Summary**
 Scatter distributes data from root to all processes.
-```
 
-```
----
-```
-
-```
 ## Topic: Virtual Topology
-```
 
-```
 **What I Learned**
-```
 
-```
 I learned how processes can be arranged in a grid using Cartesian topology.
-```
 
-```
 **How to Execute**
 mpiexec -n 4 python virtualtopology.py
-```
 
-```
 **Use / Output**
 Processes are assigned neighbors in UP, DOWN, LEFT, RIGHT directions.
-```
 
-```
 **When to Use**
 In grid-based simulations like matrix or image processing.
-```
 
-```
 **Advantages**
-```
 
 - `Structured communication` 
 
 - `Easy neighbor identification` 
 
-```
+
 **Disadvantages**
-```
 
 - `Complex setup` 
 
-```
-**Summary**
-```
 
-```
+**Summary**
+
 Virtual topology organizes processes in a grid structure.
-```
 
