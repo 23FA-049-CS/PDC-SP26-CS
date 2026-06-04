@@ -2,11 +2,6 @@
 # Chapter 3 – Process Based Parallelism in Python
 ```
 
-```
----
-```
-
-```
 ## Topic: Communication with Pipe
 ```
 

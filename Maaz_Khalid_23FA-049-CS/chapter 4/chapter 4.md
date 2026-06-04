@@ -1,54 +1,31 @@
-```
+
 # Chapter 4 – MPI (Message Passing Interface) in Python
-```
 
-```
----
-```
-
-```
 ## Topic: Alltoall Communication
-```
 
-```
 **What I Learned**
-```
 
-```
 I learned how each process sends and receives data from all other processes
 using Alltoall communication.
-```
 
-```
 **How to Execute**
-```
 
-```
 mpiexec -n 4 python alltoall.py
-```
 
-```
 **Use / Output**
-```
 
-```
 Each process sends data to all other processes and receives data from them.
-```
 
-```
 **When to Use**
-When full communication between all processes is required.
-```
 
-```
+When full communication between all processes is required.
+
 **Advantages**
-```
 
 - `Full data exchange between processes` 
 
 - `Useful in parallel matrix operations` 
 
-```
 **Disadvantages**
 ```
 
